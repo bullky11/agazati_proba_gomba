@@ -24,18 +24,20 @@ def adatbeker():
 def elso_idos():
     i=0
     hetvenesek=[]
-    elso=0
     while i<len(korok_lista):
         if korok_lista[i]>70:
             hetvenesek.append(i)
         i+=1
     elso=hetvenesek[0]
-    return (elso)
     print(elso)
+    return elso
     konzol_kiir(elso)
-
 def konzol_kiir(elso):
-    (f" Első idős ember korának helye a listában: {elso}")
+    print(f"Első idős ember korának helye a listában: {elso}")
+    fajlba_kiir(elso)
+def fajlba_kiir(elso):
+    fajl=open("oreg.txt","w",encoding="utf-8")
+    fajl.write(f"Első idős ember korának helye a listában: {elso}")
 
 
 
